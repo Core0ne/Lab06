@@ -40,7 +40,7 @@ namespace Lab06
             encodedMessageTextBox.Clear();
             messageWithErrorTextBox.Clear();
             fixedMessageTextBox.Clear();
-            errorIndexTextBox.Clear();
+            messageAboutErrorTextBox.Clear();
 
             string initialMessage = initialMessageTextBox.Text;
             int messageLength = initialMessage.Length;
@@ -56,7 +56,7 @@ namespace Lab06
             encodedMessage.Length = encodedMessage.Capacity;
             foreach (int position in positions)
             {
-                encodedMessage[position - 1] = 'k';
+                encodedMessage[position - 1] = '0';
             }
 
             int k = 0;
@@ -64,7 +64,7 @@ namespace Lab06
             {
                 for (; k < encodedMessage.Length; k++)
                 {
-                    if (encodedMessage[k] != 'k')
+                    if (encodedMessage[k] != '0')
                     {
                         encodedMessage[k] = initialMessage[i];
                         k++;
@@ -80,10 +80,7 @@ namespace Lab06
                 {
                     for (int jj = 0; jj < positions[i] && j + jj < encodedMessage.Length; jj++)
                     {
-                        if (encodedMessage[j + jj] != 'k')
-                        {
-                            sum += (int)Char.GetNumericValue(encodedMessage[j + jj]);
-                        }
+                        sum += (int)Char.GetNumericValue(encodedMessage[j + jj]);
                     }
                 }
 
@@ -91,10 +88,6 @@ namespace Lab06
                 if (controlBit == 1)
                 {
                     encodedMessage[positions[i] - 1] = '1';
-                }
-                else
-                {
-                    encodedMessage[positions[i] - 1] = '0';
                 }
             }
 
@@ -156,7 +149,7 @@ namespace Lab06
 
             if (indexOfError == 0)
             {
-                fixedMessageTextBox.Text = "Ошибок не обнаружено";
+                messageAboutErrorTextBox.Text = "Ошибок не обнаружено";
             }
             else
             {
@@ -169,7 +162,7 @@ namespace Lab06
                     messageWithError[indexOfError - 1] = '0';
                 }
                 fixedMessageTextBox.Text = messageWithError.ToString();
-                errorIndexTextBox.Text = indexOfError.ToString();
+                messageAboutErrorTextBox.Text = "Ошибка допущена в бите №" + indexOfError.ToString();
             }
         }
     }

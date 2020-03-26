@@ -39,8 +39,7 @@
             this.fixErrorButton = new System.Windows.Forms.Button();
             this.fixedMessageLabel = new System.Windows.Forms.Label();
             this.fixedMessageTextBox = new System.Windows.Forms.TextBox();
-            this.errorIndexLabel = new System.Windows.Forms.Label();
-            this.errorIndexTextBox = new System.Windows.Forms.TextBox();
+            this.messageAboutErrorTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // inputMessageLabel
@@ -155,33 +154,22 @@
             this.fixedMessageTextBox.TabIndex = 10;
             this.fixedMessageTextBox.TabStop = false;
             // 
-            // errorIndexLabel
+            // messageAboutErrorTextBox
             // 
-            this.errorIndexLabel.AutoSize = true;
-            this.errorIndexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.errorIndexLabel.Location = new System.Drawing.Point(61, 564);
-            this.errorIndexLabel.Name = "errorIndexLabel";
-            this.errorIndexLabel.Size = new System.Drawing.Size(292, 20);
-            this.errorIndexLabel.TabIndex = 11;
-            this.errorIndexLabel.Text = "Ошибка была допущена в бите №";
-            // 
-            // errorIndexTextBox
-            // 
-            this.errorIndexTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.errorIndexTextBox.Location = new System.Drawing.Point(370, 558);
-            this.errorIndexTextBox.Name = "errorIndexTextBox";
-            this.errorIndexTextBox.ReadOnly = true;
-            this.errorIndexTextBox.Size = new System.Drawing.Size(68, 26);
-            this.errorIndexTextBox.TabIndex = 12;
-            this.errorIndexTextBox.TabStop = false;
+            this.messageAboutErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.messageAboutErrorTextBox.Location = new System.Drawing.Point(65, 558);
+            this.messageAboutErrorTextBox.Name = "messageAboutErrorTextBox";
+            this.messageAboutErrorTextBox.ReadOnly = true;
+            this.messageAboutErrorTextBox.Size = new System.Drawing.Size(586, 26);
+            this.messageAboutErrorTextBox.TabIndex = 12;
+            this.messageAboutErrorTextBox.TabStop = false;
             // 
             // Lab06_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 623);
-            this.Controls.Add(this.errorIndexTextBox);
-            this.Controls.Add(this.errorIndexLabel);
+            this.Controls.Add(this.messageAboutErrorTextBox);
             this.Controls.Add(this.fixedMessageTextBox);
             this.Controls.Add(this.fixedMessageLabel);
             this.Controls.Add(this.fixErrorButton);
@@ -213,8 +201,7 @@
         private System.Windows.Forms.Button fixErrorButton;
         private System.Windows.Forms.Label fixedMessageLabel;
         private System.Windows.Forms.TextBox fixedMessageTextBox;
-        private System.Windows.Forms.Label errorIndexLabel;
-        private System.Windows.Forms.TextBox errorIndexTextBox;
+        private System.Windows.Forms.TextBox messageAboutErrorTextBox;
     }
 }
 
